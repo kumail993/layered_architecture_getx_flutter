@@ -1,7 +1,7 @@
 import 'package:ads_client/export.dart';
 
 TextStyle getBoldStyle({
-  Color color = kcBlackColor,
+  Color color = kcWhitecolor,
   double fontSize = 24,
   FontWeight fontWeight = FontWeight.bold,
 }) {
@@ -13,7 +13,7 @@ TextStyle getBoldStyle({
 }
 
 TextStyle getRegularBoldStyle({
-  Color color = kcBlackColor,
+  Color color = kcWhitecolor,
   double fontSize = 24,
   FontWeight fontWeight = FontWeight.w500,
 }) {
@@ -24,7 +24,7 @@ TextStyle getRegularBoldStyle({
   );
 }
 
-TextStyle getMediumStyle({Color color = kcBlackColor, double fontSize = 14}) {
+TextStyle getMediumStyle({Color color = kcWhitecolor, double fontSize = 14}) {
   return GoogleFonts.ibmPlexSans(
     fontSize: fontSize,
     color: color,
@@ -32,7 +32,7 @@ TextStyle getMediumStyle({Color color = kcBlackColor, double fontSize = 14}) {
   );
 }
 
-TextStyle getRegularStyle({Color color = kcBlackColor, double fontSize = 12}) {
+TextStyle getRegularStyle({Color color = kcWhitecolor, double fontSize = 12}) {
   return GoogleFonts.ibmPlexSans(
     fontSize: fontSize,
     color: color,

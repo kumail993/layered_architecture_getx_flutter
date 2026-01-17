@@ -1,3 +1,5 @@
+import 'package:ads_client/core/theme/app_colors.dart';
+import 'package:ads_client/widgets/my_textfield.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatelessWidget {
@@ -5,6 +7,14 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text('Auth View')));
+    return Scaffold(
+      //     backgroundColor: kcBackgroundColor,
+      body: Center(
+        child: MyTextField(
+          controller: TextEditingController(text: 'Hello'),
+          hintText: 'Enter your text',
+        ),
+      ),
+    );
   }
 }

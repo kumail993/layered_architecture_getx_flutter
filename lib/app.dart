@@ -18,7 +18,7 @@ class AdsClientApp extends StatelessWidget {
           getPages: AppRouter.pages(),
           builder: (context, child) {
             child = ResponsiveBreakpoints.builder(
-              child: child!,
+              child: child!,  
               breakpoints: [
                 const Breakpoint(start: 0, end: 450, name: MOBILE),
                 const Breakpoint(start: 451, end: 1200, name: TABLET),

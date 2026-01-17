@@ -10,10 +10,10 @@ class ThemeCustomizer {
 
   Language currentLanguage = Language.languages.first;
 
-  ThemeMode theme = ThemeMode.light;
-  ThemeMode leftBarTheme = ThemeMode.light;
-  ThemeMode rightBarTheme = ThemeMode.light;
-  ThemeMode topBarTheme = ThemeMode.light;
+  ThemeMode theme = ThemeMode.dark;
+  ThemeMode leftBarTheme = ThemeMode.dark;
+  ThemeMode rightBarTheme = ThemeMode.dark;
+  ThemeMode topBarTheme = ThemeMode.dark;
 
   bool rightBarOpen = false;
   bool leftBarCondensed = false;

@@ -56,15 +56,15 @@ abstract final class AppTheme {
     brightness: Brightness.light,
 
     /// Primary Color
-    primaryColor: const Color(0xffD17E0F),
-    scaffoldBackgroundColor: const Color(0xffffffff),
+    primaryColor: kcPrimaryColor,
+    scaffoldBackgroundColor: kcWhitecolor,
     canvasColor: Colors.transparent,
 
     /// AppBar Theme
     appBarTheme: const AppBarTheme(
-      backgroundColor: Color(0xffffffff),
-      iconTheme: IconThemeData(color: Color(0xff495057)),
-      actionsIconTheme: IconThemeData(color: Color(0xff495057)),
+      backgroundColor: kcWhitecolor,
+      iconTheme: IconThemeData(color: kcWhitecolor),
+      actionsIconTheme: IconThemeData(color: kcSecondaryColor),
     ),
 
     /// Card Theme
@@ -166,7 +166,7 @@ abstract final class AppTheme {
 
     /// Other Colors
     splashColor: Colors.white.withAlpha(100),
-  
+
     highlightColor: const Color(0xffeeeeee),
     colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xffD17E0F))
         .copyWith(surface: const Color(0xffffffff))
@@ -179,26 +179,34 @@ abstract final class AppTheme {
     brightness: Brightness.dark,
 
     /// Primary Color
-    primaryColor: const Color(0xffD17E0F),
+    primaryColor: kcPrimaryColor,
 
     /// Scaffold and Background color
-    scaffoldBackgroundColor: const Color(0xff161616),
-    canvasColor: Colors.transparent,
+    scaffoldBackgroundColor: kcWhitecolor,
+    canvasColor: Colors.white,
 
     /// AppBar Theme
-    appBarTheme: const AppBarTheme(backgroundColor: Color(0xff161616)),
+    appBarTheme: AppBarTheme(
+      backgroundColor: kcSurfaceColor,
+      iconTheme: IconThemeData(color: kcWhitecolor),
+      actionsIconTheme: IconThemeData(color: kcSecondaryColor),
+    ),
 
     /// Card Theme
     cardTheme: const CardThemeData(color: Color(0xff222327)),
     cardColor: const Color(0xff222327),
 
     /// Input (Text-Field) Theme
-    inputDecorationTheme: const InputDecorationTheme(
+    inputDecorationTheme: InputDecorationTheme(
+      fillColor: kcSurfaceColor,
+      filled: true,
+      hintStyle: getRegularStyle(color: kcLightTextColor),
+
       focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Color(0xffD17E0F)),
+        borderSide: BorderSide(color: kcBlackColor),
       ),
       enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.white70),
+        borderSide: BorderSide(color: kcBlackColor),
       ),
       border: OutlineInputBorder(borderSide: BorderSide(color: Colors.white70)),
     ),
@@ -211,29 +219,29 @@ abstract final class AppTheme {
     dividerColor: const Color(0xff363636),
 
     /// Floating Action Theme
-    floatingActionButtonTheme: FloatingActionButtonThemeData(
-      backgroundColor: const Color(0xffD17E0F),
-      splashColor: Colors.white.withAlpha(100),
-      highlightElevation: 8,
-      elevation: 4,
-      focusColor: const Color(0xffD17E0F),
-      hoverColor: const Color(0xffD17E0F),
-      foregroundColor: Colors.white,
-    ),
+    // floatingActionButtonTheme: FloatingActionButtonThemeData(
+    //   backgroundColor: const Color(0xffD17E0F),
+    //   splashColor: Colors.white.withAlpha(100),
+    //   highlightElevation: 8,
+    //   elevation: 4,
+    //   focusColor: const Color(0xffD17E0F),
+    //   hoverColor: const Color(0xffD17E0F),
+    //   foregroundColor: Colors.white,
+    // ),
 
     /// Bottom AppBar Theme
-    bottomAppBarTheme: const BottomAppBarThemeData(
-      color: Color(0xff464c52),
-      elevation: 2,
-    ),
+    // bottomAppBarTheme: const BottomAppBarThemeData(
+    //   color: Color(0xff464c52),
+    //   elevation: 2,
+    // ),
 
     /// Tab bar Theme
-    tabBarTheme: const TabBarThemeData(
-      unselectedLabelColor: Color(0xff495057),
-      labelColor: Color(0xffD17E0F),
+    tabBarTheme: TabBarThemeData(
+      unselectedLabelColor: kcLightTextColor,
+      labelColor: kcPrimaryColor,
       indicatorSize: TabBarIndicatorSize.label,
       indicator: UnderlineTabIndicator(
-        borderSide: BorderSide(color: Color(0xffD17E0F), width: 2),
+        borderSide: BorderSide(color: kcPrimaryColor, width: 2),
       ),
     ),
 
@@ -247,7 +255,7 @@ abstract final class AppTheme {
           WidgetState.selected,
         };
         if (state.any(interactiveStates.contains)) {
-          return const Color(0xffabb3ea);
+          return kcSurfaceColor;
         }
         return null;
       }),
@@ -259,7 +267,7 @@ abstract final class AppTheme {
           WidgetState.selected,
         };
         if (state.any(interactiveStates.contains)) {
-          return const Color(0xffD17E0F);
+          return kcPrimaryColor;
         }
         return null;
       }),
@@ -281,7 +289,7 @@ abstract final class AppTheme {
     ),
 
     ///Other Color
-   disabledColor: const Color(0xffa3a3a3),
+    disabledColor: const Color(0xffa3a3a3),
     highlightColor: Colors.white.withAlpha(28),
     splashColor: Colors.white.withAlpha(56),
     colorScheme: ColorScheme.fromSeed(
